@@ -3,8 +3,8 @@ package controllers
 import (
 	"surl/storage"
 
-	"github.com/gin-gonic/gin"
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"strconv"
 )
 
@@ -15,17 +15,17 @@ func StoreUrl(c *gin.Context) {
 	if str == "" {
 		c.JSON(500, gin.H{
 			"surl": "",
-			"msg": "failed",
+			"msg":  "failed",
 		})
-	}else{
+	} else {
 		c.JSON(200, gin.H{
 			"surl": str,
-			"msg": "success",
+			"msg":  "success",
 		})
 	}
 }
 
-func GetUrl(c *gin.Context){
+func GetUrl(c *gin.Context) {
 	surl := c.Param("surl")
 	fmt.Println(surl)
 	key, err := strconv.ParseUint(surl, 36, 0)
@@ -37,7 +37,7 @@ func GetUrl(c *gin.Context){
 	if str == "" {
 		c.JSON(500, gin.H{
 			"surl": "",
-			"msg": "failed",
+			"msg":  "failed",
 		})
 	}
 	c.Redirect(302, str)

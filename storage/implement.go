@@ -1,10 +1,10 @@
 package storage
 
 import (
-	"strconv"
-	"sync/atomic"
 	"fmt"
 	"github.com/garyburd/redigo/redis"
+	"strconv"
+	"sync/atomic"
 )
 
 var current_index uint64 = 1000
@@ -23,7 +23,7 @@ func (r *RedisStorage) StoreLongUrl2Redis(url string) string {
 	return strconv.FormatUint(index, 36)
 }
 
-func (r *RedisStorage) GetShortUrlFromRedis(key uint64) string{
+func (r *RedisStorage) GetShortUrlFromRedis(key uint64) string {
 	p := r.pool.Get()
 	defer p.Close()
 
