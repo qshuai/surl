@@ -29,6 +29,13 @@ Configure scurl:
 	cd surl
 	cp conf_default.yml conf.yml
 	vim conf.yml
+
+go ahead:
+
+	curl curl --form long_url=https://www.surltest.com/s\?ie\=utf-8... http://localhost:8080/store
+	//output: s4lYPd
+	curl http://localhost:8080/s4lYPd
+	//redirect 302: https://www.surltest.com/s\?ie\=utf-8...
 	
 License
 ---------
