@@ -1,0 +1,12 @@
+go_version: 1.9.1
+version: 1.0.0
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password: yourpassword
+  db: 0
+  idle_timeout: 120
+  max_idle_conns: 100
+  max_open_conns: 1000
+  initial_open_conns: 10
