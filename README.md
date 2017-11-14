@@ -26,9 +26,13 @@ Install surl using "go get" command:
 	
 Configure scurl:
 
-	cd surl
+	cd github.com/scrapup/surl
 	cp conf_default.yml conf.yml
 	vim conf.yml
+	
+Run this program
+	
+	go run main.go &
 
 go ahead:
 
