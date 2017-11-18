@@ -5,9 +5,10 @@ import (
 	"github.com/garyburd/redigo/redis"
 	"strconv"
 	"sync/atomic"
+	"github.com/spf13/viper"
 )
 
-var current_index uint64 = 1000
+var current_index uint64 = uint64(viper.GetInt("start"))
 
 func (r *RedisStorage) StoreLongUrl2Redis(url string) string {
 	p := r.pool.Get()

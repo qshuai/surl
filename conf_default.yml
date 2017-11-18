@@ -1,6 +1,9 @@
 go_version: 1.9.1
 version: 1.0.0
 
+# short url start value configurationq
+start: 100000
+
 redis:
   host: 127.0.0.1
   port: 6379
