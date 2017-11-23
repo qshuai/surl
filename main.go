@@ -2,10 +2,11 @@ package main
 
 import (
 	_ "surl/app"
+	_ "surl/storage"
+
 	"surl/controllers"
 
 	"github.com/gin-gonic/gin"
-	_ "surl/storage"
 )
 
 func main() {

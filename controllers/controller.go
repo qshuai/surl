@@ -4,8 +4,9 @@ import (
 	"surl/storage"
 
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"strconv"
+
+	"github.com/gin-gonic/gin"
 )
 
 func StoreUrl(c *gin.Context) {

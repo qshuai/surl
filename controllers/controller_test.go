@@ -1,8 +1,9 @@
 package controllers
 
 import (
-	"surl/storage"
 	"testing"
+
+	"surl/storage"
 )
 
 const (

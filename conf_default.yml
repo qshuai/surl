@@ -1,7 +1,7 @@
 go_version: 1.9.1
 version: 1.0.0
 
-# short url start value configurationq
+# short url start value configuration
 start: 100000
 
 redis:
