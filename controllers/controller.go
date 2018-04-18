@@ -9,6 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// StoreUrl store a long url with short one
 func StoreUrl(c *gin.Context) {
 	origin := c.PostForm("long_url")
 	fmt.Println(origin)
@@ -26,6 +27,7 @@ func StoreUrl(c *gin.Context) {
 	}
 }
 
+// GetUrl get the specific origin long url represented by a short one
 func GetUrl(c *gin.Context) {
 	surl := c.Param("surl")
 	fmt.Println(surl)

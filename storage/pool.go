@@ -7,6 +7,7 @@ import (
 	"github.com/garyburd/redigo/redis"
 )
 
+// Redis struct
 type Redis struct {
 	Host             string
 	Port             int
@@ -18,11 +19,13 @@ type Redis struct {
 	InitialOpenConns int
 }
 
+// RedisStorage represents redis pool
 type RedisStorage struct {
 	pool   *redis.Pool
 	config Redis
 }
 
+// NewRedis generate redis instance
 func NewRedis(config Redis) (RedisInterface, error) {
 	r := &RedisStorage{
 		config: config,

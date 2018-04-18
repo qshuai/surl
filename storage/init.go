@@ -6,11 +6,12 @@ import (
 	"github.com/spf13/viper"
 )
 
+// RedisPool declare
 var RedisPool RedisInterface
 
 //获取redis配置信息
 func init() {
-	redis_config := Redis{
+	redisConfig := Redis{
 		Host:             viper.GetString("redis.host"),
 		Port:             viper.GetInt("redis.port"),
 		Password:         viper.GetString("redis.password"),
@@ -22,7 +23,7 @@ func init() {
 	}
 
 	var err error
-	RedisPool, err = NewRedis(redis_config)
+	RedisPool, err = NewRedis(redisConfig)
 	if err != nil {
 		panic(fmt.Errorf("redis: redis init error %s \n", err))
 	}
