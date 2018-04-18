@@ -1,6 +1,6 @@
 Surl: URL Shortener Service
 ===========
-[![Go Report Card](https://goreportcard.com/badge/github.com/qshuai/surl)](https://goreportcard.com/report/github.com/scrapup/surl)
+[![Go Report Card](https://goreportcard.com/badge/github.com/qshuai/surl)](https://goreportcard.com/report/github.com/qshuai/surl)
 
 What Is It？
 ----------
