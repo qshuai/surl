@@ -1,6 +1,6 @@
 Surl: URL Shortener Service
 ===========
-[![Go Report Card](https://goreportcard.com/badge/github.com/scrapup/surl)](https://goreportcard.com/report/github.com/scrapup/surl)
+[![Go Report Card](https://goreportcard.com/badge/github.com/qshuai/surl)](https://goreportcard.com/report/github.com/scrapup/surl)
 
 What Is It？
 ----------
@@ -9,7 +9,7 @@ This is a service not tool. The service display high pefermance thanks to [gin](
 - convert a long url to easy share url
 - redirect to the true link when visiting a given short url
 
-Features
+Features:
 ----------
 
 - high pefermance
@@ -17,24 +17,32 @@ Features
 - easy deploy
 - completed testing
 
-Usage
+Usage:
 ----------
 
 Install surl using "go get" command:
 
-	go get github.com/scrapup/surl
+	go get github.com/qshuai/surl
 	
-Configure scurl:
+Configure surl:
 
-	cd github.com/scrapup/surl
+	cd ${GOPATH}/github.com/qshuai/surl
 	cp conf_default.yml conf.yml
 	vim conf.yml
 	
-Run this program
+Run this program:
 	
-	go run main.go &
+	// production environment
+	go build main.go
+	nohup ./main &
+	
+	// for development
+	cd ${GOPATH}
+	go get github.com/beego/bee
+	cd github.com/qshuai/surl
+	bee run
 
-go ahead:
+Go ahead:
 
 	curl --form long_url=https://www.surltest.com/s\?ie\=utf-8... http://localhost:8080/store
 	//output: s4lYPd
