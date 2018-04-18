@@ -7,7 +7,7 @@ start: 100000
 redis:
   host: 127.0.0.1
   port: 6379
-  password: yourpassword
+  password: ******
   db: 0
   idle_timeout: 120
   max_idle_conns: 100

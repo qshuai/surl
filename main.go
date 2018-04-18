@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "surl/app"
+	_ "surl/config"
 	_ "surl/storage"
 
 	"surl/controllers"
